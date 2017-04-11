@@ -1,47 +1,44 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<!-- Renders the YAML front matter into the title of the page -->
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<!-- Navigation -->
-			<nav>
-	    		<ul>
-						<li><a href="/" class="navlink"><strong>rishiosaur.</strong></a></li>
-		        <li><a href="/about" class="navlink">about.</a></li>
-	        	<li><a href="/cv" class="navlink">cv.</a></li>
-	        	<li><a href="/blog" class="navlink">blog.</a></li>
-						<li><a href="/categories" class="navlink">categories.</a></li>
-						<li><a href="/blog/atom.xml" class="navlink">rss.</a></li>
-						<li><a href="/podcast" class="navlink">podcast.</a></li>
-
-	    		</ul>
-			</nav>
-			<!-- Content -->
-			<div class="container">
-
-			<!-- Angular via Jekyll for content in _posts/ to be rendered by _layouts/post.html -->{{ content }}
-
-			</div>
-			<!-- Footer -->
-			<footer>
-	    		<ul>
-							<!-- Main email -->
-	        		<li><a href="mailto:rishiosaur@gmail.com" class="navlink">email.</a></li>
-							<!-- GitHub -->
-	        		<li><a href="https://github.com/rishiosaur" class="navlink">github.</a></li>
-							<!-- Twitter -->
-							<li><a href="http://twitter.com/rishiosaur" class="navlink">twitter.</a></li>
-							<!-- School Email -->
-							<li><a href="mailto:rishi2019@wgdavis.ca" class="navlink">school email.</a></li>
-							<!-- Medium Publication -->
-							<li><a href="https://medium.com/18-over-3" class="navlink">medium.</a></li>
-							<!-- Github Pages -->
-							<li><a href="http://pages.github.com" class="navlink">Proudly Hosted By GitHub Pages.</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+<html>
+  <head>
+    <!-- Renders the YAML front matter into the title of the page-->
+    <title>{{ page.title }}</title>
+    <!-- link to main stylesheet-->
+    <link rel="stylesheet" type="text/css" href="/sass/main.css">
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav>
+      <ul>
+        <li><a href="/" class="navlink"><strong>rishiosaur.</strong></a></li>
+        <li><a href="/about" class="navlink">about.</a></li>
+        <li><a href="/cv" class="navlink">cv.</a></li>
+        <li><a href="/blog" class="navlink">blog.</a></li>
+        <li><a href="/categories" class="navlink">categories.</a></li>
+        <li><a href="/blog/atom.xml" class="navlink">rss.</a></li>
+        <li><a href="/podcast" class="navlink">podcast.</a></li>
+      </ul>
+    </nav>
+    <!-- Content-->
+    <div class="container">
+      <!-- Angular via Jekyll for content in _posts/ to be rendered by _layouts/post.html-->{{ content }}
+    </div>
+    <!-- Footer-->
+    <footer>
+      <ul>
+        <!-- Main email-->
+        <li><a href="mailto:rishiosaur@gmail.com" class="navlink">email.</a></li>
+        <!-- GitHub-->
+        <li><a href="https://github.com/rishiosaur" class="navlink">github.</a></li>
+        <!-- Twitter-->
+        <li><a href="http://twitter.com/rishiosaur" class="navlink">twitter.</a></li>
+        <!-- School Email-->
+        <li><a href="mailto:rishi2019@wgdavis.ca" class="navlink">school email.</a></li>
+        <!-- Medium Publication-->
+        <li><a href="https://medium.com/18-over-3" class="navlink">medium.</a></li>
+        <!-- Github Pages-->
+        <li><a href="http://pages.github.com" class="navlink">Proudly Hosted By GitHub Pages.</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

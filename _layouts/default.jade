@@ -1,0 +1,52 @@
+//output:default.html
+doctype html
+html
+  head
+    // Renders the YAML front matter into the title of the page
+    title {{ page.title }}
+    // link to main stylesheet
+    link(rel='stylesheet', type='text/css', href='/sass/main.css')
+  body
+    // Navigation
+    nav
+      ul
+        li
+          a.navlink(href='/')
+            strong rishiosaur.
+        li
+          a.navlink(href='/about') about.
+        li
+          a.navlink(href='/cv') cv.
+        li
+          a.navlink(href='/blog') blog.
+        li
+          a.navlink(href='/categories') categories.
+        li
+          a.navlink(href='/blog/atom.xml') rss.
+        li
+          a.navlink(href='/podcast') podcast.
+    // Content
+    .container
+      // Angular via Jekyll for content in _posts/ to be rendered by _layouts/post.html
+      | {{ content }}
+    // Footer
+    footer
+      ul
+        // Main email
+        li
+          a.navlink(href='mailto:rishiosaur@gmail.com') email.
+        // GitHub
+        li
+          a.navlink(href='https://github.com/rishiosaur') github.
+        // Twitter
+        li
+          a.navlink(href='http://twitter.com/rishiosaur') twitter.
+        // School Email
+        li
+          a.navlink(href='mailto:rishi2019@wgdavis.ca') school email.
+        // Medium Publication
+        li
+          a.navlink(href='https://medium.com/18-over-3') medium.
+        // Github Pages
+        li
+          a.navlink(href='http://pages.github.com') Proudly Hosted By GitHub Pages.
