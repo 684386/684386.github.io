@@ -1,13 +1,20 @@
 /* Variables
-$titlefonts: 'Kollektif', 'Roboto', 'Helvetica', 'Arial', 'Sans-Serif'
-$contentfonts: 'Lora', 'Georgia', 'Cambria', 'Helvetica', 'Arial', 'Sans-Serif'
+$fonts: (content: 'Lora', 'Georgia', 'Cambria', 'Helvetica', 'Arial', 'Sans-Serif', title: 'Kollektif', 'Roboto', 'Helvetica', 'Arial', 'Sans-Serif')
+$colors: (content: #262626, background: #1a1a1a, )
+
+@function color($color-name)
+  @return map-get($colors, $color-name)
+
+@function font($font-family)
+  @return map-get($map, $key)
+
 
 /* General Stuff
 
 body
   margin: 60px auto
   width: 70%
-  background-color: #1a1a1a
+  background-color: color(background)
   color: whitesmoke
 
 img
@@ -28,7 +35,7 @@ img
   position: relative
   display: inline-block
   &:hover
-    background: #d9d9d9
+    background: whitesmoke
     color: #333333
 
 .navlink, .btnlink
@@ -129,7 +136,7 @@ h4
 /* Nav and Footer stylings
 
 nav
-  background-color: #262626
+  background-color: $content-color
   padding: 10px 25px
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2)
   ul
@@ -156,7 +163,7 @@ footer
   ul li
     display: inline
     margin-right: 20px
-  background-color: #262626
+  background-color: $content-color
   padding: 10px
   float: bottom
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2)
@@ -167,17 +174,16 @@ footer
   padding: 100px
 
 .titlefont
-  font-family: 'Kollektif','Roboto', 'Helvetica', 'Arial', 'Sans-Serif'
+  font-family: $titlefonts
 
 ul.posts
   margin: 20px auto 40px
   font-size: 1.5em
-  font-family: 'Kollektif','Roboto', 'Helvetica', 'Arial', 'Sans-Serif'
+  font-family: $titlefonts
   font-weight: none
   li
     list-style: none
 
 .post
-  background-color: #262626
+  background-color: $content-color
   padding: 20px
-  box-shadow: 10px 1

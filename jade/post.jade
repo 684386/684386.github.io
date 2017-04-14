@@ -1,0 +1,18 @@
+| ---
+| layout: default
+| ---
+// In a post, there is YAML front matter at the very top, just like this one. The <h1> tag renders the title part into the title, with AngularJS.
+h1 {{ page.title }}
+p.meta.titlefont {{ page.date | date_to_string }}
+.post-categories
+  | {% if post %}
+  | {% assign categories = post.categories %}
+  | {% else %}
+  | {% assign categories = page.categories %}
+  | {% endif %}
+  | {% for category in categories %}
+  a.taglink.post(href='{{site.baseurl}}/categories/#{{category|slugize}}') {{category}}
+  |   {% unless forloop.last %} {% endunless %}
+  |   {% endfor %}
+div
+  | {{ content }}
