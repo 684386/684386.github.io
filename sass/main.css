@@ -47,7 +47,7 @@ img {
   font-weight: bold;
   transition: all 0.25s ease; }
   .linklink:hover {
-    background-color: #whitesmoke;
+    background-color: whitesmoke;
     color: #333333; }
 
 .taglink {
