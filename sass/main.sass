@@ -1,12 +1,12 @@
 /* Variables
-$fonts: (content: 'Lora', 'Georgia', 'Cambria', 'Helvetica', 'Arial', 'Sans-Serif', title: 'Kollektif', 'Roboto', 'Helvetica', 'Arial', 'Sans-Serif')
-$colors: (content: #262626, background: #1a1a1a, )
+$fonts: (content: 'Lora, Georgia, Cambria, Helvetica, Arial, Sans-Serif', title: 'Kollektif, Roboto, Helvetica, Arial, Sans-Serif')
+$colors: (content: #262626, background: #1a1a1a)
 
 @function color($color-name)
   @return map-get($colors, $color-name)
 
 @function font($font-family)
-  @return map-get($map, $key)
+  @return map-get($fonts, $font-family)
 
 
 /* General Stuff
@@ -64,7 +64,7 @@ img
 
 .taglink
   font-size: 1.5em
-  font-family: $titlefonts
+  font-family: font(title)
   text-decoration: none
   color: whitesmoke
   font-weight: bold
@@ -82,7 +82,7 @@ img
     background: #d9d9d9
     color: #333333
   font-size: 1em
-  font-family: $titlefonts
+  font-family: font(title)
   text-decoration: none
   color: whitesmoke
   font-weight: bold
@@ -110,10 +110,10 @@ p, ul
   font-size: 1.5em
   line-height: 1.4em
   color: whitesmoke
-  font-family: $contentfonts
+  font-family: font(content)
 
 h1, h2, h3, h4
-  font-family: $titlefonts
+  font-family: font(title)
 
 h1
   font-size: 3em
@@ -136,12 +136,12 @@ h4
 /* Nav and Footer stylings
 
 nav
-  background-color: $content-color
+  background-color: font(content)
   padding: 10px 25px
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2)
   ul
     font-size: 1em
-    font-family: $titlefonts
+    font-family: font(title)
     padding: 0px
     list-style: none
     font-weight: none
@@ -149,7 +149,7 @@ nav
 
 footer ul
   font-size: 1em
-  font-family: $titlefonts
+  font-family: font(title)
   padding: 0px
   list-style: none
   font-weight: none
@@ -163,7 +163,7 @@ footer
   ul li
     display: inline
     margin-right: 20px
-  background-color: $content-color
+  background-color: font(content)
   padding: 10px
   float: bottom
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2)
@@ -174,16 +174,16 @@ footer
   padding: 100px
 
 .titlefont
-  font-family: $titlefonts
+  font-family: font(title)
 
 ul.posts
   margin: 20px auto 40px
   font-size: 1.5em
-  font-family: $titlefonts
+  font-family: font(title)
   font-weight: none
   li
     list-style: none
 
 .post
-  background-color: $content-color
+  background-color: font(content)
   padding: 20px
